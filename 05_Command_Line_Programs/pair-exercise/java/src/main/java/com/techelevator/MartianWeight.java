@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import java.util.Scanner;
+
 /*
  In case you've ever pondered how much you weight on Mars, here's the calculation:
  	Wm = We * 0.378
@@ -18,8 +20,39 @@ Enter a series of Earth weights (space-separated): 98 235 185
  */
 public class MartianWeight {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) 
+	{
+		Scanner scanner = new Scanner(System.in); //you'll have to enter this line to get input from the user
+		
+		// get weight on earth
+		System.out.print("Please enter your first weight (in pounds):"); // "ln" moves cursor to next line
+		String weightOnEarth1 = scanner.nextLine();
+		
+		System.out.print("Please enter your second weight (in pounds):"); // "ln" moves cursor to next line
+		String weightOnEarth2 = scanner.nextLine();
+		
+		System.out.print("Please enter your third weight (in pounds):"); // "ln" moves cursor to next line
+		String weightOnEarth3 = scanner.nextLine();
+		
+		// convert Mars weight
+		double earthWeight1 = Double.parseDouble(weightOnEarth1);
+		double earthWeight2 = Double.parseDouble(weightOnEarth2);
+		double earthWeight3 = Double.parseDouble(weightOnEarth3);
+		
+		//call the function that determines what age group
+		double weightOnMars1 = earthWeight1 * 0.378;
+		double weightOnMars2 = earthWeight2 * 0.378;
+		double weightOnMars3 = earthWeight3 * 0.378;
+		
+		// call the function that determines weight on Mars
+		System.out.print("Your weights on Mars are: " + weightOnMars1 + " lbs, " + weightOnMars2 + " lbs,  " + weightOnMars3 + " lbs");
+			
+		
+				
+		
+		
+		//System.out.println("Your weight on Earth is: " + earthWeight + " lbs");
 	}
-
 }
+
+
